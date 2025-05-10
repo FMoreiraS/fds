@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(141, 4, 4);
+    font-family:arial;
+}
+.title{text-align: center;}
+.main{font-size: 40px;}
+#pgnm{color: white;}
+#subject{
+    margin: 350px; 
+    margin-top: 1px; 
+    margin-bottom: 1px;
+}
+#sptitle{
+    text-align: center;
+}
+.bold{font-weight: 700;}
+.italic{font-style: italic;}
+.xlink{color: rgb(255, 255, 255);}
+.box{
+    width: 250px;
+    border: solid white 2px;
+    padding: 5px;
+    margin-left: 250px;
+    position: absolute;
+    background-color: rgb(122, 23, 23);
+    text-align: center;
+}
+ul li {color: rgb(241, 241, 121);}

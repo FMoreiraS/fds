@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratic Lesson 6</title>
+</head>
+<body>
+    <!-- Fazer um botão que deve ter fundo azul, verde quando sobrevoado e vermelho, exibindo a mensagem
+    "quebrei", quando clicado.-->
+    <button id="button">Click me</button>
+</body>
+</html>
+<script>
+    let button = document.querySelector("#button");
+    let brokenButton = false;
+    let clickCounter = 0;
+
+    button.style.background = "blue";
+
+    // Essa seria uma forma de fazer:
+    // button.addEventListener("mouseover", greenBg);
+    
+    // function greenBg() {
+    //     button.style.background = green;
+    // }
+    // Esta é mais simples, e adequada à necessidade; chama-se função lambda:
+    
+    button.addEventListener("mouseover", e =>{
+        if(brokenButton === false){
+            button.style.background = "green";
+        }
+    })
+        
+    button.addEventListener("mouseout", e =>{
+        if(!brokenButton){
+            button.style.background = "blue";
+        }
+    })
+
+    button.addEventListener("click", e =>{
+        clickCounter++;
+        if(clickCounter >= 10){
+            button.style.background = "red";
+            button.innerHTML = "Broken";
+            brokenButton = true;
+        }
+    })
+</script>

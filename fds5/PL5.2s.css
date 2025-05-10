@@ -1,0 +1,17 @@
+.img{
+    background: url("R-34.jpg") no-repeat;
+    width: 400px;
+    height: 200px;
+    /* Até aqui nada é exibido no browser. */
+    display: block;  
+    /* Isso força uma exibição de um bloco com as dimensões especificadas, com a imagem.*/
+    background-size: contain;
+}
+.img:hover{
+    background-position: 10px 0px;
+}
+.img:active{
+    background: url("R-34.jpg") no-repeat;
+    background-size: contain;
+    width: 380px;
+}

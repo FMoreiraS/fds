@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple calculator</title>
+</head>
+<body>
+    <!-- Fazer uma calcudora com as quatro operações básicas usando JavaScript.
+     Usar dois campos input para inserção dos valores, um campo select para a
+     operação desejada, um campo div para a resposta e um button para solicitar
+     o cálculo.
+    -->
+    <input id="field1" type="text">
+    <select id="operation">
+        <option>+</option>
+        <option>-</option>
+        <option>x</option>
+        <option>/</option>
+    </select>
+    <input id="field2" type="text">
+    <button id="calculate">=</button> <br>
+    Result: <div id="result"></div>
+    </body>
+</html>
+<script>
+    const field1 = document.querySelector("#field1");
+    const selector = document.querySelector("#operation");
+    const field2 = document.querySelector("#field2");
+    const equals = document.querySelector("#calculate");
+    let result = document.querySelector("#result");
+
+    equals.addEventListener("click", calculate);
+
+    function calculate(){
+        const value1 = parseInt(field1.value);
+        const value2 = parseInt(field2.value);
+        const operation = selector.value;
+
+        if(operation === "+"){
+            result.innerHTML = value1 + value2;
+        }
+        if(operation === "-"){
+            result.innerHTML = value1 - value2;
+        }
+        if(operation === "x"){
+            result.innerHTML = value1 * value2;
+        }
+        if(operation === "/"){
+            result.innerHTML = value1 / value2;
+        }
+    }
+</script>

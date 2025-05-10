@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson4.1</title>
+</head>
+<body>
+    <h1> FDS Pratic Lesson 4: Exercise 01</h1>
+    <h2> Pedido de pizza</h2>
+    <!-- <p>Uma opção interessnte do VS Code é o comando html5, que faz já uma formatação básica para o documento, indicando o
+        idioma da página, a formatação de caracteres em UTF-8 e outras</p>  
+    <p> A sugestão é fazer um formulário, num site de pedido de pizzas. O formulário é um campo onde o usuário preencherá 
+        dados que serão enviados para uma página.
+        A tag para formulário é FORM, que precisa fechar, e também deve conter dois parâmetros: o primeiro é o "method", a 
+        forma como os dados serão enviados, que pode ser "get" (geralmente para fromulários de busca) ou "post" (para 
+        cadastros, mais adiante diferenciamos melhor), e o segundo é a "action", o destino dos dados preenchidos, ou seja, 
+        o processador dos dados. Os parâmetros ficam dentro da primeira tag. Entre as tags form ficam os campos do 
+        formulário.
+    </p>
+    <p> Agora usaremos o method get e a action "teste.jsp", que, de fato, é só arquivo de teste, não faremos uma página 
+        para processar esses dados. Devemos incrementar no formulário elementos dos tipos text (nome do usuário), email,
+        radio (tamanhos), select (sabores), checkbox (adicionais), date, textarea (comentário) e submit. Desses
+        elementos, só select e textarea não são inputs.</p>
+    -->
+    <form method="get" action="teste.jsp">
+        Nome de usuário: <input type="text" name="nome"> <br>
+        Email: <input type="email" name="e-mail"> <br>
+        Tamanho:
+        <input type="radio" name="tamanho" value="g"> Grande
+        <input type="radio" name="tamanho" value="m"> Médio
+        <input type="radio" name="tamanho" value="p"> Pequeno
+        <br>
+        Sabor: <select name="sabor">
+            <option>Calabresa</option>
+            <option>Frango com catupiri</option>
+            <option>Portuguesa</option>
+        </select>
+        <br>
+        Adicionais:
+        <input type="checkbox" name="borda" value="sim"> Borda recheada
+        <input type="checkbox" name="queijo" value="sim"> Queijo extra
+        <br>
+        Data de entrega: <input type="date" name="deliveryDate">
+        <br>
+        Comentário: <br>
+        <textarea name="message" rows="10" cols="40"></textarea>
+        <br>
+        <input type="submit">
+    </form>
+    <!-- Com o method get, os dados do formulário ficam expostos no link da página ao ser feita a submissão
+     do formulário. O mesmo não ocorre com post: por isso ele é comum em formulários de cadastro.-->
+    </body>
+</html>

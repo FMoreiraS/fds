@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator 2.0</title>
+</head>
+    <!-- Modificar a calculadora removendo o botão e fazendo com que qualquer alteração
+     de valor em qualquer um dos campos faça a resposta ser automaticamente calculada.
+    -->
+<body>
+    <input id="field1" type="text">
+    <select id="operation">
+        <option>+</option>
+        <option>-</option>
+        <option>x</option>
+        <option>/</option>
+    </select>
+    <input id="field2" type="text"> <br>
+    Result:
+    <div id="result"></div>
+</body>
+</html>
+
+<!-- <style>
+    .problem {
+        background: rgb(236, 55, 55);
+        color: white;
+    }
+</style>
+ -->
+<script>
+    const field1 = document.querySelector("#field1");
+    const selector = document.querySelector("#operation");
+    const field2 = document.querySelector("#field2");
+    const equals = document.querySelector("#calculate");
+    let result = document.querySelector("#result");
+
+    // Agora usamos outros eventos para executar a função:
+    selector.addEventListener("change", calculate);
+    // Change não dá resposta imediata quando se escreve nos campos; keyup é imediato:
+    field1.addEventListener("keyup", calculate);
+    field2.addEventListener("keyup", calculate);
+
+    function calculate(){
+        // Com cálculo automatizado, a verificação deve ser diferente:
+        if(field1.value != '' && field2.value != ''){
+            
+            const value1 = parseInt(field1.value);
+            const value2 = parseInt(field2.value);
+            const operation = selector.value;
+            // Um switch é leaner:
+            switch(operation){
+                case "+": {
+                    result.innerHTML = value1 + value2;
+                    break;
+                }
+                case "-": {
+                    result.innerHTML = value1 - value2;
+                    break;
+                }
+                case "x": {
+                    result.innerHTML = value1 * value2;
+                    break;
+                }
+                case "/": {
+                    result.innerHTML = value1 / value2;
+                    break;
+                }
+            }
+        }
+    }
+</script>

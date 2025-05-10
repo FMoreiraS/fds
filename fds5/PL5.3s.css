@@ -1,0 +1,14 @@
+.list{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    list-style: upper-roman;
+    color: purple;
+    margin-left: 20px;
+    width: fit-content;
+}
+.list li:nth-child(odd){
+    background-color: silver;
+}
+.list li:nth-child(even){
+    background-color: gold;
+}

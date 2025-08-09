@@ -23,7 +23,7 @@
         radio (tamanhos), select (sabores), checkbox (adicionais), date, textarea (comentário) e submit. Desses
         elementos, só select e textarea não são inputs.</p>
     -->
-    <form method="get" action="teste.jsp">
+    <form method="post" action="teste.jsp">
         Nome de usuário: <input type="text" name="nome"> <br>
         Email: <input type="email" name="e-mail"> <br>
         Tamanho:
@@ -46,7 +46,7 @@
         Comentário: <br>
         <textarea name="message" rows="10" cols="40"></textarea>
         <br>
-        <input type="submit">
+        <input type="submit" value="Enviar">
     </form>
     <!-- Com o method get, os dados do formulário ficam expostos no link da página ao ser feita a submissão
      do formulário. O mesmo não ocorre com post: por isso ele é comum em formulários de cadastro.-->
